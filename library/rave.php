@@ -135,6 +135,11 @@ class Rave {
         );
 
         ksort($options);
+	
+	if(isset($this->handler)){
+        	$this->handler->onInit($options);		
+	}
+	
 
         // $this->transactionData = $options;
 
